@@ -41,3 +41,34 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.name
+Streaq-iOS/Bolts.framework/Bolts
+*.xml
+*.iml
+*.h
+*.plist
+Streaq-iOS/Bolts.framework/Modules/module.modulemap
+*.strings
+*.pbxproj
+Streaq-iOS/Streaq.xcodeproj/project.xcworkspace/xcuserdata/thomas.xcuserdatad/WorkspaceSettings.xcsettings
+*.modulemap
+Streaq-iOS/Parse.framework/Parse
+*.txt
+Streaq-iOS/Streaq.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+*.xcuserstate
+Streaq-iOS/Streaq.xcodeproj/project.xcworkspace/xcuserdata/thomas.xcuserdatad/xcdebugger/Expressions.xcexplist
+*.xcbkptlist
+Streaq-iOS/Streaq.xcodeproj/xcuserdata/thomas.xcuserdatad/xcschemes/Streaq.xcscheme
+*.m
+*.xib
+Streaq-iOS/Streaq/BMContactListBaseViewController.swift
+*.swift
+Streaq-iOS/Streaq/button_upload_portrait.png
+*.png
+Streaq-iOS/Streaq/Gotham-Bold.otf
+*.otf
+*.storyboard
+*.ttf
+Streaq-iOS/Streaq/PrefixHeader.pch
+*.json
+Streaq-iOS/Streaq/libMPCategoryHelpers.a
