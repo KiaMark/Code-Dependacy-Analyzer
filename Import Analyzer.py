@@ -1,6 +1,7 @@
 import os
 
 folder = input("Input folder name: ")
+folderOpen(folder)
 
 # for fp in os.listdir(file):
 #    print(fp)
@@ -11,6 +12,7 @@ folder = input("Input folder name: ")
 def folderOpen(folder):
     for content in os.listdir(folder):
         ext = os.path.splitext(content)[-1].lower()
+        print("ext: " + ext)
         if ext == ".h":
             print(content, "is .h!")
             header(content)
@@ -23,5 +25,3 @@ def folderOpen(folder):
 
 def header(folder):
     print(folder, "in header!")
-
-folderOpen(folder)
