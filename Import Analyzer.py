@@ -32,8 +32,7 @@ def header(folder):
     file.close()
     for line in read:
         if str("import") in line:
-            importFile = line
-            print(importFile)
+            print(line)
 
 folder = input("Input folder name: ")
 folderOpen(folder)
