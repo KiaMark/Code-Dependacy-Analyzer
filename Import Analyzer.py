@@ -1,5 +1,13 @@
 import os
 
+fileSize = 0
+hSize = 0
+mSize = 0
+swiftSize = 0
+importSize = 0
+skipFile = 0
+random = 0
+
 def folderOpen(folder):
     #relativePath = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", folder))
     for content in os.listdir(folder):
@@ -43,6 +51,7 @@ def header(folder):
             global importSize
             importSize = importSize + 1
 
+
 print("Hello User!")
 print("1-Project statistics")
 print("2-Unnecessary import statements")
@@ -51,13 +60,6 @@ print("4-Redundant import statements")
 print("5-Import statement counts")
 choice = int(input("Select an option:"))
 if choice == 1:
-    fileSize = 0
-    hSize = 0
-    mSize = 0
-    swiftSize = 0
-    importSize = 0
-    skipFile = 0
-    random = 0
     folderOpen(input("Input folder name: "))
     print("Number of file(s): ", fileSize)
     print("Number of .h file(s): ", hSize)
@@ -65,4 +67,8 @@ if choice == 1:
     print("Number of .swift file(s): ", swiftSize)
     print("Number of skipped empty file(s): ", skipFile)
     print("Number of random file(s): ", random)
+if choice == 2:
+    print("Option 2 selected")
+if choice == 5:
+    folderOpen(input("Input folder name: "))
     print("Total number of import(s): ", importSize)
