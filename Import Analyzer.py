@@ -18,7 +18,7 @@ def folderOpen(folder):
     #relativePath = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", folder))
     for content in os.listdir(folder):
         if content[0] == '.':
-            skipFile = skipFile + 2
+            skipFile = skipFile + 1
             #print("Skipping empty file: " + content)
         else:
             fullPath = os.path.join(folder, content)
