@@ -9,46 +9,45 @@ skipFile = 0
 random = 0
 
 def folderOpen(folder):
+    global fileSize
+    global hSize
+    global mSize
+    global swiftSize
+    global skipFile
+    global random
     #relativePath = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", folder))
     for content in os.listdir(folder):
         if content[0] == '.':
-            global skipFile
             skipFile = skipFile + 2
             #print("Skipping empty file: " + content)
         else:
             fullPath = os.path.join(folder, content)
             ext = os.path.splitext(content)[-1].lower()
-
             if ext == ".h":
                 header(fullPath)
-                global fileSize
                 fileSize = fileSize + 1
-                global hSize
                 hSize = hSize + 1
             elif ext == ".m":
                 header(fullPath)
                 fileSize = fileSize + 1
-                global mSize
                 mSize = mSize + 1
             elif ext == ".swift":
                 header(fullPath)
                 fileSize = fileSize + 1
-                global swiftSize
                 swiftSize = swiftSize + 1
             elif os.path.isdir(fullPath):
                 folderOpen(fullPath)
             else:
                 fileSize = fileSize + 1
-                global random
                 random = random + 1
 
 def header(folder):
+    global importSize
     file = open(folder, 'r')
     read = file.readlines()
     file.close()
     for line in read:
         if str("import") in line:
-            global importSize
             importSize = importSize + 1
 
 
@@ -69,6 +68,10 @@ if choice == 1:
     print("Number of random file(s): ", random)
 if choice == 2:
     print("Option 2 selected")
+if choice == 3:
+    print("Option 3 selected")
+if choice == 4:
+    print("Option 4 selected")
 if choice == 5:
     folderOpen(input("Input folder name: "))
     print("Total number of import(s): ", importSize)
